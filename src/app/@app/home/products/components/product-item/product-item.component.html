@@ -1,0 +1,53 @@
+<div class="product-card" *ngIf="product">
+    <div class="product-img">
+        <!-- <span class="discount-badge">-12 %</span> -->
+        <img [src]="product.thumbnail" alt="">
+    </div>
+    <div class="product-info">
+        <p (click)="goToProductDetails()">
+
+
+
+            {{(product.title.length>20)?
+            (product.title | slice:0:20)+'..':(product.title)}}
+        </p>
+
+        <h4>
+            <!-- {{(product.description.length>70)?
+                (product.description | slice:0:70)+'..':(product.description)}} -->
+
+            $<span>{{product.price}}.00</span>
+        </h4>
+        <!-- <div class="price">
+            <span class="before"><strong>{{product.price}}</strong> USD</span>
+            <span class="after"><strong>{{product.price}}</strong> USD</span>
+        </div> -->
+
+        <p class="description">
+
+
+
+            {{(product.description.length>70)?
+            (product.description | slice:0:70)+'..':(product.description)}}
+        </p>
+
+        <div class="wish-list-wrapper">
+            <div class="rate">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+
+                <span class="rate-number">
+                    {{product.rating}}
+                </span>
+            </div>
+            <button (click)="addToCart(product)">
+                <i class="far fa-heart"></i>
+
+                Watch
+            </button>
+        </div>
+    </div>
+</div>

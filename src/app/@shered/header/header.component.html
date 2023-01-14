@@ -1,0 +1,92 @@
+<header>
+    <section class="container">
+        <div class="content">
+
+            <div id="logo">
+                <img src="assets/images/navbar/Logo.png" alt="">
+            </div>
+
+            <ul class="navigation">
+                <li>
+                    <a routerLink="/home/list">Sell on Shopka</a>
+                </li>
+                <li>
+                    <a routerLink="/home/list">Register</a>
+                </li>
+            </ul>
+
+
+        </div>
+        <div class="navigation-action">
+
+            <div class="search-input-wrapper">
+
+                <div class="search-bar">
+                    <button (click)="onSearchProduct()">
+                        <i class="fas fa-search fa-1x "></i>
+                    </button>
+                    <input type="text" class="form-control-search" [(ngModel)]="searchTerm"
+                        placeholder="useless items on white background">
+                </div>
+
+                <a class="consumer" routerLink="/home/list">Consumer Electronics</a>
+            </div>
+
+        </div>
+        <div class="cart" >
+
+            <button (click)="navigate()" [style.visibility]="(currentUser$ | async) === null ? 'visible' : 'hidden'"  class="signin-btn">Sign in</button>
+            <button class="cart-btn">
+                <span class="cart-count">{{this.cartProducts.length}}</span>
+                My cart
+            </button>
+
+            <div class="links">
+
+                <img src="assets/images/navbar/user.png" alt="">
+            </div>
+
+
+            
+        </div>
+        <button class="bars" style="display: none;">
+            <i class="fas fa-bars"></i>
+        </button>
+    </section>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="right-side">
+    <div class="logo-wrapper">
+
+        <div class="logo">
+            <div class="blue-sky-dot"></div>
+        </div>
+
+        <div class="logo-label">
+            ClickTik
+        </div>
+    </div>
+
+    <ul>
+        <li><a href="/home">Home</a></li>
+    </ul>
+</div>
+
+<div class="left-side">
+<p>peter</p>
+</div> -->

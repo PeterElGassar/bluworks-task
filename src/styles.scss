@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'custom-font';
+  src: url('assets/font/Quicksand-VariableFont_wght.ttf') format('woff2');
+}
+
+* {
+  text-decoration: none;
+  color: #98A2B3;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+button,
+div,
+a {
+  font-family: "custom-font" !important;
+  font-style: normal !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+// responsive
+@media (max-width: 1199px) {
+  .card {
+    width: 95% !important;
+
+  }
+
+  .row,.row-pagination {
+    flex-direction: column;
+  }
+  .product-catgeory{
+    width: 100% !important;
+    height: auto !important;
+  }
+  .products-list {
+    width: 100% !important;
+  }
+  .filter-parent{
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .login{
+    padding: 15px;
+    .col-6:nth-child(1){
+      display: none;
+    }
+
+    .input-file-base{
+      width: 100% !important;
+    }
+  }
+
+  .navigation{
+    display: none !important;
+  }
+
+  .consumer{
+    display: none;
+  }
+
+  header{
+    .content{
+      flex: 2 !important;
+    }
+  }
+
+  .navigation-action{
+    flex: 3 !important;
+
+  }
+
+  .cart{
+    flex: 2 !important;
+
+  }
+}
+
+@media (max-width: 767px) {
+  .navigation-action{
+display: none !important;
+  }
+  .bars{
+display: block !important;
+  }
+
+  .cart{
+    display: none !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .search-form {
+    padding: 35px 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .search-form {
+    padding: 35px 20px;
+  }
+}

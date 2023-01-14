@@ -1,0 +1,86 @@
+<!-- <app-header></app-header> -->
+
+<div class="login">
+
+    <div class="col-6 img-col">
+        <a class="back" routerLink="/home/list"><i class="fas fa-arrow-left"></i> back to list</a>
+        <img src="assets/images/product-details/products.png" alt="">
+        <img src="assets/images/product-details/bg.png" alt="">
+    </div>
+
+    <div class="col-6 text-col">
+        <div class="content-wrapper">
+            <span class="discount-badge">HotSale</span>
+            <h1>Whiskas® Dry Adult Dewasa 7+, Cat food Rasa Mackerel</h1>
+            <div class="rate">
+                <span class="category">CAT FOOD</span> 
+                <span style="margin-right: 0.4rem;">|</span>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="reviewer">{{param.rating}} (2130 reviews)</span>
+            </div>
+            <div class="description">
+                <h4>Description:</h4>
+                <p>
+                    <!-- Makanan yang lengkap dan seimbang, dengan 41 nutrisi penting.
+                    Mengandung antioksidan (vitamin E dan selenium) untuk sistem kekebalan tubuh yang sehat.
+                    Mengandung serat untuk memperlancar pencernaan dan meningkatkan kesehatan usus.
+                    Diperkaya dengan kalsium, fosfor dan vitamin D untuk tulang yang sehat. -->
+
+                    {{param.description}}
+                    <br>
+                    <br>
+                    Makanan yang lengkap dan seimbang, dengan 41 nutrisi penting.
+                    Mengandung antioksidan (vitamin E dan selenium) untuk sistem kekebalan tubuh yang sehat.
+                    Mengandung serat untuk memperlancar pencernaan dan meningkatkan kesehatan usus.
+                </p>
+            </div>
+            <div class="img-slider">
+                <div class="img-1"><img src="assets/images/product-details/thum.png" alt=""></div>
+                <div style="opacity: 0.5;" class="img-1"><img src="assets/images/product-details/thum.png" alt=""></div>
+                <div style="opacity: 0.5;" class="img-1"><img src="assets/images/product-details/thum.png" alt=""></div>
+            </div>
+            <div class="sizes">
+                <h4>Size:</h4>
+                <span class="size-badge active">1.5 Kg</span>
+                <span class="size-badge">2.5 Kg</span>
+                <span class="size-badge">500 gr</span>
+                <span class="size-badge">700 gr</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="add-cart-wrapper">
+        <div class="temp">
+            <div class="col-1">
+                <img src="assets/images/product-details/thum.png" alt="">
+                <div class="title">
+                    <p>Whiskas® Dry Adult Dewasa 7+, Cat food Rasa</p>
+                                <span class="category">CAT FOOD</span>
+
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="quntity">
+            
+                    <span>Qty:</span>
+                    <div class="qty-section">
+                        <button class="qty-plue">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <input type="text" value="1">
+                        <button  class="qty-minus">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <button (click)="addToCart()" class="add-to-cart">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+</div>

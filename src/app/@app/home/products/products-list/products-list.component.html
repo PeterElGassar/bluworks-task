@@ -1,0 +1,150 @@
+<app-header [cartProducts]="this.cartProducts" (onSearch)="onSearch($event)">
+</app-header>
+
+<div class="main-section">
+    <!-- <div class="bread-crumb">
+
+        <h2>iPhone</h2>
+        <p>Home / Products / Smart Phones / iPhone</p>
+    </div> -->
+
+    <div class="row">
+        <div class="product-catgeory">
+
+            <div class="filter-parent">
+
+                <div (click)="onCategoryOpen()" [ngClass]="{'active': isCategoryOpen}" class="content-container">
+                    <div class="question">
+                        <h4 class="check-list-title">Categories</h4>
+
+                        <button class="up-arrow">
+                            <img [ngClass]="{'rotat' :isCategoryOpen}" src="assets/images/up-arrow.png" alt="arrow">
+                        </button>
+                    </div>
+
+                    <div class="answer">
+                        <div class="check-warpper" *ngFor="let category of categories; let i = index">
+                            <ng-container *ngIf="i < 8">
+                                <input (change)="filterByCategory()" type="checkbox" id="{{category}}"
+                                    class="custom-control-input cat-check">
+                                <label id="{{category}}" class="custom-control-label"
+                                    for="{{category}}">{{category}}</label>
+                            </ng-container>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="filter-parent">
+
+                <div (click)="onPriceOpen()" [ngClass]="{'active': isPriceOpen}" class="content-container">
+                    <div class="question">
+                        <h4 class="check-list-title">Expanded Filters</h4>
+
+                        <button class="up-arrow">
+                            <img [ngClass]="{'rotat' :isPriceOpen}" src="assets/images/up-arrow.png" alt="arrow">
+                        </button>
+                    </div>
+
+                    <div class="answer">
+                        <div class="check-warpper">
+
+
+
+                            <div class="price-row">
+                                <input (change)="filterByPriceRange()" [attr.data-max]="400" [attr.data-min]="200"
+                                    type="checkbox" id="400" class="custom-control-input price-check">
+                                <label id="400" class="custom-control-label" for="400">Price 200 → 400</label>
+                            </div>
+        
+                            <div class="price-row">
+                                <input (change)="filterByPriceRange()" [attr.data-max]="500" [attr.data-min]="300"
+                                    type="checkbox" id="500" class="custom-control-input price-check">
+                                <label id="500" class="custom-control-label" for="500">Price 300 → 500</label>
+                            </div>
+        
+                            <div class="price-row">
+                                <input (change)="filterByPriceRange()" [attr.data-max]="600" [attr.data-min]="500"
+                                    type="checkbox" id="600" class="custom-control-input price-check">
+                                <label id="600" class="custom-control-label" for="600">Price 500 → 600</label>
+                            </div>
+        
+                            <div class="price-row">
+                                <input (change)="filterByPriceRange()" [attr.data-max]="700" [attr.data-min]="600"
+                                    type="checkbox" id="700" class="custom-control-input price-check">
+                                <label id="700" class="custom-control-label" for="700">Price 600 → 700</label>
+                            </div>
+        
+                            <div class="price-row">
+                                <input (change)="filterByPriceRange()" [attr.data-max]="800" [attr.data-min]="700"
+                                    type="checkbox" id="800" class="custom-control-input price-check">
+                                <label id="800" class="custom-control-label" for="800">Price 700 → 800</label>
+                            </div>
+        
+                            <div class="price-row">
+                                <input (change)="filterByPriceRange()" [attr.data-max]="900" [attr.data-min]="800"
+                                    type="checkbox" id="900" class="custom-control-input price-check">
+                                <label id="900" class="custom-control-label" for="900">Price 800 → 900</label>
+                            </div>
+        
+                            <div class="price-row">
+                                <input (change)="filterByPriceRange()" [attr.data-max]="1000" [attr.data-min]="900"
+                                    type="checkbox" id="1000" class="custom-control-input price-check">
+                                <label id="1000" class="custom-control-label" for="1000">Price 900 → 1000</label>
+                            </div>
+        
+                            <div class="price-row">
+                                <input (change)="filterByPriceRange()" [attr.data-max]="2000" [attr.data-min]="1000"
+                                    type="checkbox" id="2000" class="custom-control-input price-check">
+                                <label id="2000" class="custom-control-label" for="2000">Price 1000 → 2000</label>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- price list -->
+
+            <!-- price list -->
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="products-list">
+
+
+            <ng-container>
+
+                <!-- <app-product-item  
+            (onAddToCart)="addToCart($event)"
+            *ngFor="let pro of filteredProducts"
+            
+            </app-product-item> -->
+                <app-product-item (onAddToCart)="addToCart($event)" *ngFor="let pro of filteredProducts"
+                    [product]="pro">
+
+                </app-product-item>
+            </ng-container>
+        </div>
+    </div>
+    <!-- <div class="row-pagination">
+    <pagination-controls (pageChange)="pageNumber = $event"></pagination-controls>
+
+</div> -->
+
+</div>

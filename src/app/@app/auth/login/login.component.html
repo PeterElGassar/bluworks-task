@@ -1,0 +1,128 @@
+<!-- <app-header></app-header> -->
+
+<div class="login">
+
+    <div class="col-6">
+        <div class="card card-1">
+            <div class="img-col">
+                <img src="assets/images/login/Ellipse 3.png" alt="">
+                <img src="assets/images/login/vector-1.png" alt="">
+            </div>
+            <div class="content-col">
+                <h2>
+                    <span>Pay Online</span>,
+                    <br>
+                    with a simple tap!
+                </h2>
+
+            </div>
+        </div>
+        <div class="card card-2">
+            <div class="img-col">
+                <img src="assets/images/login/Ellipse 3.png" alt="">
+                <img src="assets/images/login/vector-2.png" alt="">
+            </div>
+            <div class="content-col">
+                <h2>
+                    <span>Unlimited</span>
+                    <br>
+                    Customisation
+                </h2>
+                
+                
+            </div>
+
+        </div>
+        <div class="card card-3">
+            <div class="img-col">
+                <img src="assets/images/login/Ellipse 3.png" alt="">
+                <img src="assets/images/login/vector-3.png" alt="">
+            </div>
+            <div class="content-col">
+                <h2>
+                    <span>Pay all over</span>,
+                    <br>
+                    the world!
+                </h2>
+                
+                
+            </div>
+
+        </div>
+    </div>
+    <div class="col-6">
+
+        <div class="form-content">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+                <h1 class="youtopia-logo"><span>You</span>topia</h1>
+
+                <div class="input-field">
+<!-- 
+                    <div *ngIf="this.errorMessage" class="input-file-base errorMessage">
+                        <h5>{{this.errorMessage}}</h5>
+                    </div> -->
+
+
+                    <div class="input-file-base">
+                        <button [disabled]="loginForm.invalid" class="signin-google" type="submit">
+                            <img src="assets/images/login/Google.png" alt="">
+                            Login through Google</button>
+                    </div>
+
+                    <div class="input-file-base">
+                        <div class="horizontal-line">
+                            <hr>
+                            <span>or</span>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="input-file-base">
+                        <label for="username">Email*</label>
+                        <input id="username" type="text" formControlName="username">
+                    </div>
+
+
+                    <div class="input-file-base">
+                        <label for="pssword">Password*</label>
+                        <button class="eye-icon">
+                            <img src="assets/images/login/eye.png" alt="">
+                        </button>
+                        <input id="password" type="password" formControlName="password">
+                        <small>Forgot your <span>Password?</span></small>
+                    </div>
+                </div>
+                <button class="sigin-btn" [disabled]="loginForm.invalid" [class.disabled]="loginForm.invalid"
+                    type="submit">Sign in</button>
+            </form>
+
+
+        </div>
+    </div>
+
+    <!-- <div class="header">
+
+            <div class="logomark">
+                <div id="content">
+                    <div id="blur">
+                    </div>
+                    <div class="dot">
+                    </div>
+                    <div id="grid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text">
+
+                <h2>Log in to your account</h2>
+                <p>Welcome back! Please enter your details.</p>
+            </div>
+
+        </div> -->
+
+
+
+
+</div>

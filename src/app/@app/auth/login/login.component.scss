@@ -1,0 +1,362 @@
+.login {
+
+  min-height: 100vh;
+  height: auto;
+  // background: #444;
+  display: flex;
+
+  .col-6 {
+    flex: 1;
+  }
+
+  .col-6:nth-child(1) {
+    background-image: url("/assets/images/login/Rectangle.png");
+
+    position: relative;
+
+    .card {
+      width: 70%;
+      height: 275px;
+      // background: #721c24;
+      display: block;
+      // border: 1px solid #444;
+      position: absolute;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+
+
+.card-1 {
+  top: 10%;
+
+  .img-col {
+    position: relative;
+    padding: 0 1rem;
+
+    img {
+      position: absolute;
+    }
+
+    img:nth-child(1) {
+      left: 31px;
+    }
+    img:nth-child(2) {
+      top: 35px;
+      left: 60px;
+    }
+  }
+
+  .content-col {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    // position: absolute;
+    // right: 65px;
+    h2{
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+
+      span{
+        color: #3F3F3F;
+
+      }
+    }
+  }
+
+}
+
+
+    .card-2 {
+      top: 35%;
+      right: 0px;
+
+      .img-col {
+        position: relative;
+        padding: 0 1rem;
+    
+        img {
+          position: absolute;
+        }
+    
+        img:nth-child(1) {
+          transform: scaleX(-1);
+          right: 31px;
+        }
+        img:nth-child(2) {
+          top: 35px;
+          right: 120px;
+        }
+      }
+    
+      .content-col {
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        // position: absolute;
+        // right: 65px;
+        h2{
+          text-align: center;
+          font-size: 24px;
+          color: #fff;
+    
+          span{
+            color: #3F3F3F;
+    
+          }
+        }
+      }
+    }
+
+    .card-3 {
+      bottom: 3%;
+
+          
+      .img-col {
+        position: relative;
+        padding: 0 1rem;
+    
+        img {
+          position: absolute;
+        }
+    
+        img:nth-child(1) {
+          left: 31px;
+        }
+        img:nth-child(2) {
+          top: 35px;
+          left: 15px;
+        }
+      }
+    
+      .content-col {
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        // position: absolute;
+        // right: 65px;
+        h2{
+          text-align: center;
+          font-size: 24px;
+          color: #fff;
+    
+          span{
+            color: #3F3F3F;
+    
+          }
+        }
+      }
+    }
+
+
+
+
+
+
+  }
+
+  .col-6:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .youtopia-logo {
+    font-size: 48px;
+    margin: 0 auto 2rem;
+    color: #3F3F3F;
+
+    span {
+      color: #6C63FF;
+    }
+  }
+
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    // width: 100%;
+    border-radius: 12px;
+
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      // width: 100%;
+
+
+      /* Inside auto layout */
+
+      flex: none;
+      order: 0;
+      align-self: stretch;
+      flex-grow: 0;
+
+      .input-field {
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        width: 100%;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+
+        .errorMessage {
+          color: #721c24;
+          background-color: #f8d7da;
+          border-color: #f5c6cb;
+          border-radius: 5px;
+
+          h5 {
+            color: #721c24;
+            text-align: center;
+            width: 100%;
+            font-family: 'Inter';
+          }
+        }
+
+        .input-file-base {
+position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0px;
+          width: 410px;
+          flex: none;
+          order: 0;
+          align-self: stretch;
+          flex-grow: 0;
+          margin: 0 auto 1rem;
+
+          label {
+            width: 50%;
+            height: 20px;
+
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 20px;
+            color: rgba(108, 99, 255, 0.69);
+            order: 0;
+            padding: 5px 1rem;
+          }
+
+          small {
+            width: 50%;
+            height: 20px;
+            font-size: 16px;
+            line-height: 20px;
+            color: #7A7A7A;
+            order: 0;
+            padding: 5px 1rem;
+
+            span {
+              color: rgba(108, 99, 255, 0.69);
+            }
+          }
+
+          input {
+
+            padding: 10px 14px;
+            height: 34px;
+            background: #FFFFFF;
+
+            border: 1px solid rgb(0 0 0 / 50%);
+            border-radius: 42px;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+
+            align-self: stretch;
+            border-radius: 42px;
+          }
+
+
+          input:focus {
+            outline: none;
+          }
+        }
+
+      }
+    }
+
+
+
+    button.sigin-btn {
+      padding: 10px 18px;
+      width: 337px;
+      background: #6C63FF;
+      /* Shadow/xs */
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+      border-radius: 60px;
+      border: none;
+      outline: none;
+      color: #fff;
+      height: 54px;
+      margin: auto;
+      font-size: 24px;
+    }
+
+  }
+
+}
+
+button.signin-google {
+
+  padding: 10px 14px;
+  height: 58px;
+  background: #fff;
+  color: #7A7A7A;
+  font-size: 20px;
+  border: 1px solid rgb(0 0 0 / 50%);
+  border-radius: 42px;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  align-self: stretch;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin: 0 1rem;
+  }
+}
+
+.horizontal-line {
+  color: rgb(0 0 0 / 50%);
+  width: 85%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+
+  hr {
+    height: 0.9px;
+    // width: 151px;
+    flex: 4;
+    color: rgba(63, 63, 63, 0.69);
+    background-color: rgba(63, 63, 63, 0.69);
+  }
+
+  span:nth-child(2) {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+.eye-icon{
+  border: none;
+    background: transparent;
+    position: absolute;
+    right: 20px;
+    bottom: 45px;
+}
